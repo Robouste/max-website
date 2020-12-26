@@ -1,0 +1,13 @@
+<mat-nav-list dense>
+	<ng-container *ngFor="let item of navMenuItems">
+		<mat-list-item>
+			<a mat-line href="...">{{ item.name }}</a>
+			<mat-icon>{{ item.icon }}</mat-icon>
+		</mat-list-item>
+		<mat-nav-list dense nested>
+			<mat-list-item *ngFor="let child of item.children" [class.selected]="child.selected">
+				<a mat-line href="...">{{ child.name }}</a>
+			</mat-list-item>
+		</mat-nav-list>
+	</ng-container>
+</mat-nav-list>

@@ -24,7 +24,8 @@
     "import-spacing": true,
     "indent": {
       "options": [
-        "spaces"
+        "tabs",
+        4
       ]
     },
     "max-classes-per-file": false,
@@ -53,7 +54,7 @@
     ],
     "no-empty": false,
     "no-inferrable-types": [
-      true,
+      false,
       "ignore-params"
     ],
     "no-non-null-assertion": true,
@@ -66,7 +67,7 @@
     ],
     "quotemark": [
       true,
-      "single"
+      "double"
     ],
     "semicolon": {
       "options": [

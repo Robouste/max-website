@@ -1,0 +1,28 @@
+<mat-toolbar>
+	<div class="toolbar-left">
+		<button mat-icon-button (click)="drawer.toggle()">
+			<mat-icon>menu</mat-icon>
+		</button>
+		<span>Max Cederroth - Artist</span>
+	</div>
+	<div class="toolbar-right">
+		<div class="search-input">
+			<input
+				#input
+				matInput
+				type="search"
+				placeholder="search"
+				(blur)="blur(input)"
+				(focus)="focus(input)"
+				[(ngModel)]="searchTerm"
+			/>
+			<mat-icon *ngIf="!input.value">search</mat-icon>
+		</div>
+		<div class="fab-icon">
+			<i class="fab fa-facebook-f"></i>
+		</div>
+		<div class="fab-icon">
+			<i class="fab fa-twitter"></i>
+		</div>
+	</div>
+</mat-toolbar>

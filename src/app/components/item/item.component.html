@@ -1,0 +1,16 @@
+<mat-card class="item" (click)="open()" [class.mat-elevation-z24]="disableClick" [class.in-dialog]="disableClick">
+	<mat-card-header *ngIf="!disableClick">
+		<div mat-card-avatar class="avatar" [style.background-image]="avatarUrl"></div>
+		<mat-card-title>{{ item.title }}</mat-card-title>
+		<mat-card-subtitle>{{ item.subTitle }}</mat-card-subtitle>
+	</mat-card-header>
+	<div class="card-image" mat-card-image>
+		<img [src]="item.asset" />
+	</div>
+	<mat-card-content *ngIf="!disableClick">
+		<p class="mat-caption">
+			<mat-icon>local_offer</mat-icon>
+			{{ item.tags.join(", ") }}
+		</p>
+	</mat-card-content>
+</mat-card>

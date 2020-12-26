@@ -1,0 +1,19 @@
+@import "variables";
+
+mat-nav-list {
+	min-width: 150px;
+	mat-list-item {
+		color: $primary-color;
+	}
+
+	&[nested] {
+		margin-left: 16px;
+		mat-list-item {
+			color: $light-secondary-text;
+		}
+	}
+
+	mat-list-item.selected {
+		color: $accent-color;
+	}
+}

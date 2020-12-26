@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+			"stylePreprocessorOptions": {
+				"includePaths": ["src/styles"]
+			},
             "outputPath": "dist/max-website",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -123,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "max-website"
+    }
+  },
+  "defaultProject": "max-website",
+  "cli": {
+    "analytics": false
+  }
 }

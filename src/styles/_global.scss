@@ -1,0 +1,22 @@
+/* Width and Height */
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #222;
+	background-clip: content-box;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $light-secondary-text;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: map-get($map: $primary-palette, $key: $primary-darker);
+	cursor: pointer;
+}

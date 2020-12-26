@@ -1,0 +1,33 @@
+@import "material/palettes";
+
+// Primary palette
+$primary-palette: $mat-teal;
+$primary-default: 300;
+$primary-lighter: 100;
+$primary-darker: 700;
+
+// Accent palette
+$accent-palette: $mat-amber;
+$accent-default: A200;
+$accent-lighter: A100;
+$accent-darker: A400;
+
+// Warn palette
+$warn-palette: $mat-red;
+$warn-default: 500;
+$warn-lighter: 100;
+$warn-darker: 700;
+
+// Theme Colors
+$primary-color: map-get(
+	$map: $primary-palette,
+	$key: $primary-default,
+);
+$accent-color: map-get(
+	$map: $accent-palette,
+	$key: $accent-default,
+);
+$warn-color: map-get(
+	$map: $warn-palette,
+	$key: $warn-default,
+);
