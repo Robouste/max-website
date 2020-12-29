@@ -13,7 +13,7 @@ mat-nav-list {
 		}
 	}
 
-	mat-list-item.selected {
+	a.selected {
 		color: $accent-color;
 	}
 }

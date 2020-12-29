@@ -1,13 +1,13 @@
 <mat-nav-list dense>
 	<ng-container *ngFor="let item of navMenuItems">
 		<mat-list-item>
-			<a mat-line [href]="item.link">{{ item.name }}</a>
+			<div mat-line>{{ item.name }}</div>
 			<mat-icon>{{ item.icon }}</mat-icon>
 		</mat-list-item>
 		<mat-nav-list dense nested>
-			<mat-list-item *ngFor="let child of item.children" [class.selected]="child.selected">
-				<a mat-line href="...">{{ child.name }}</a>
-			</mat-list-item>
+			<a mat-list-item *ngFor="let child of item.children" [routerLink]="child.link" routerLinkActive="selected">
+				{{ child.name }}
+			</a>
 		</mat-nav-list>
 	</ng-container>
 </mat-nav-list>

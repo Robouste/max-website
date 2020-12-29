@@ -13,7 +13,6 @@ export class SidenavComponent {
 			{
 				name: "Year",
 				icon: "date_range",
-				link: "...",
 				children: [
 					{
 						name: "2019",
@@ -70,7 +69,7 @@ export class SidenavComponent {
 interface NavMenuItem {
 	name: string;
 	icon?: string;
-	link: string;
+	link?: string;
 	children?: NavMenuItem[];
 	selected?: boolean;
 }
