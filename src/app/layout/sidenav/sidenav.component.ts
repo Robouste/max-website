@@ -7,48 +7,63 @@ import { Component } from "@angular/core";
 })
 export class SidenavComponent {
 	public navMenuItems: NavMenuItem[];
-	public children: NavMenuItem[] = [
-		{
-			name: "Tentacles",
-			link: "...",
-		},
-		{
-			name: "Loli",
-			link: "...",
-		},
-		{
-			name: "Furry",
-			link: "...",
-		},
-	];
 
 	constructor() {
 		this.navMenuItems = [
 			{
-				name: "Drawings",
-				icon: "gesture",
+				name: "Year",
+				icon: "date_range",
 				link: "...",
-				children: this.children,
-			},
-			{
-				name: "3D Arts",
-				icon: "grain",
-				link: "...",
-				children: this.children,
-			},
-			{
-				name: "Paintings",
-				icon: "brush",
-				link: "...",
-				children: this.children,
-			},
-			{
-				name: "Animations",
-				icon: "movie_creation",
-				link: "...",
-				children: this.children,
-			},
+				children: [
+					{
+						name: "2019",
+						link: "/2019",
+					},
+					{
+						name: "2018",
+						link: "/2018",
+					},
+					{
+						name: "2017",
+						link: "/2017",
+					},
+					{
+						name: "2016",
+						link: "/2016",
+					},
+					{
+						name: "2015",
+						link: "/2015",
+					},
+					{
+						name: "2014",
+						link: "/2014",
+					},
+					{
+						name: "2013",
+						link: "/2013",
+					},
+					{
+						name: "2012",
+						link: "/2012",
+					},
+					{
+						name: "2011",
+						link: "/2011",
+					},
+					{
+						name: "2010",
+						link: "/2010",
+					},
+					{
+						name: "2009",
+						link: "/2009",
+					},
+				],
+			}
 		];
+
+		this.navMenuItems[0].children = this.navMenuItems[0].children.reverse();
 	}
 }
 
