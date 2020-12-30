@@ -1,3 +1,9 @@
-<div class="items-container">
-	<app-item *ngFor="let item of currentPictures" [year]="year" [pictureName]="item"></app-item>
+<h2 class="accent-text">{{ year }}</h2>
+
+<div class="items-container" id="gallery">
+	<mat-card class="item" *ngFor="let picture of currentPictures" [attr.data-src]="getPictureUrl(picture)">
+		<mat-card-content>
+			<img [src]="getPictureUrl(picture)" />
+		</mat-card-content>
+	</mat-card>
 </div>

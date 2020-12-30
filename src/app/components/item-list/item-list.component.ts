@@ -3,6 +3,8 @@ import { ActivatedRoute } from "@angular/router";
 import { IJsonItem } from "./../../interfaces/json-item.interface";
 import { ApplicationService } from "./../../services/application.service";
 
+declare var lightGallery: any;
+
 @Component({
 	selector: "app-item-list",
 	templateUrl: "item-list.component.html",
@@ -24,8 +26,17 @@ export class ItemListComponent implements OnInit {
 				this.year = params["id"] ?? "2019";
 				this.currentPictures = this._allItems
 					.find((jsonItem: IJsonItem) => jsonItem.year === this.year)
-					.pictures.reverse();
+					.pictures.slice()
+					.reverse();
+
+				setTimeout(() => {
+					lightGallery(document.getElementById("gallery"));
+				}, 0);
 			});
 		});
+	}
+
+	getPictureUrl(pictureName): string {
+		return `./assets/${this.year}/${pictureName}`;
 	}
 }
